@@ -57,7 +57,7 @@
 
     /* reset */
     ::-webkit-scrollbar {
-        width: 19px;
-        height: 11px;
+        width: 8px;
+        height: 8px;
     }
 }

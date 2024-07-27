@@ -4,6 +4,24 @@
     --toc-width: 300px;
 }
 
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: "YH", "SCP", sans-serif;
+}
+
+.post-content {
+    /*color: var(--secondary);*/
+    font-family: "YH", "SCP", sans-serif;
+}
+
+.post-content pre,code {
+  font-family: 'SCP', sans-serif;
+  font-size: 10;
+  line-height: 1.2;
+  max-height: 40rem;
+}
+
 .toc {
     margin: 0 2px 40px 2px;
     border: 1px solid var(--border);

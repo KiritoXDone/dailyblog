@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "SCP";
+    src: url("/fonts/SourceCodePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "YH";
+    src: url("/fonts/YouHei.ttf") format("truetype");
+}
