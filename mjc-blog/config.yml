@@ -1,7 +1,8 @@
-baseURL: https://KiritoXDone.github.io/ # 绑定的域名
+baseURL: https://kiritoxdone.github.io/ # 绑定的域名
 languageCode: zh # en-us
 title: KiritoXD's Blog
 theme: PaperMod  # 主题名字，和themes文件夹下的一致
+
 
 enableInlineShortcodes: true
 enableEmoji: true # 允许使用 Emoji 表情，建议 true
@@ -78,6 +79,7 @@ params:
   ShowWordCounts: true
   VisitCount: true
   ShowLastMod: true #显示文章更新时间
+  math: true
 
   ShowToc: true # 显示目录
   TocOpen: true # 自动展开目录
@@ -92,8 +94,20 @@ params:
     buttons:
       - name: 👨🏻‍💻 技术
         url: posts/study
-      - name: 🏖 生活
+      - name: 🏸 生活
         url: posts/life
+  
+  socialIcons:
+    - name: github
+      url: "https://github.com/KiritoXDone"
+    - name: Telegram
+      url: "https://t.me/kiritoxd"
+    - name: QQ
+      url: "img/qq.jpg"
+    - name: WeChat
+      url: "img/wechat.jpg"
+    - name: email
+      url: "mailto:mjc0623@foxmail.com"
   
   label: # 左上角图标
     text: "KiritoXD's Blog"
