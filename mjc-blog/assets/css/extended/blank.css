@@ -15,12 +15,12 @@ body {
     font-family: "YH", "SCP", sans-serif;
 }
 
-.post-content pre,code {
+/* .post-content pre,code {
   font-family: 'SCP', sans-serif;
   font-size: 10;
   line-height: 1.2;
   max-height: 40rem;
-}
+} */
 
 .toc {
     margin: 0 2px 40px 2px;
