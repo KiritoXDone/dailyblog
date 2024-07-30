@@ -1,9 +1,9 @@
 @font-face {
     font-family: "SCP";
-    src: url("/fonts/SourceCodePro-Regular.ttf") format("truetype");
+    src: url("/fonts/SourceCodePro-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "YH";
-    src: url("/fonts/YouHei.ttf") format("truetype");
+    font-family: "ZZHT";
+    src: url("/fonts/NotoSansSC-Regular.woff2") format("woff2");
 }
