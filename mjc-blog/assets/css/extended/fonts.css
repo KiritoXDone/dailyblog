@@ -1,9 +1,12 @@
 @font-face {
     font-family: "SCP";
     src: url("/fonts/SourceCodePro-Regular.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "YH";
-    src: url("/fonts/YouHei.woff2") format("woff2");
+    src: url("https://plat-sh-community-prod-upload-ugc.oss-cn-shanghai.aliyuncs.com/upload/2024/10/10/431907881/b2a2cddd9caabd0af95ff80caf226c3f_7415834030802974089.jpg?response-content-type=font%2Fwoff2%3Bcharset%3DUTF-8") format("woff2"),
+         url("/fonts/YouHei.woff2") format("woff2");
+    font-display: swap;
 }

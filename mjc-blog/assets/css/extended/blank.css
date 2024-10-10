@@ -29,20 +29,19 @@
 body {
     font-size: 18px;
     line-height: 1.6;
-    font-family: "YH", "SCP", sans-serif;
+    font-family: "PingFang SC", "Microsoft YaHei", "YH", sans-serif;
 }
 
 .post-content {
     /*color: var(--secondary);*/
-    font-family: "YH", "SCP", sans-serif;
+    font-family: "PingFang SC", "Microsoft YaHei", "YH", sans-serif;
 }
 
-@media screen and (min-width: 768px) {
-    ::-webkit-scrollbar {
-        width: 13px;
-        height: 13px;
-    }
+.post-content pre code {
+    /*color: var(--secondary);*/
+    font-family: "PingFang SC", "SCP", "Microsoft YaHei", sans-serif;
 }
+
 
 .toc {
     margin: 0 2px 40px 2px;
