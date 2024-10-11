@@ -29,12 +29,12 @@
 body {
     font-size: 18px;
     line-height: 1.6;
-    font-family: "PingFang SC", "Microsoft YaHei", "YH", sans-serif;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .post-content {
     /*color: var(--secondary);*/
-    font-family: "PingFang SC", "Microsoft YaHei", "YH", sans-serif;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .post-content pre code {
