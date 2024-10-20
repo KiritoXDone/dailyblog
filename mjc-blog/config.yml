@@ -103,7 +103,7 @@ params:
     - name: Telegram
       url: "https://t.me/kiritoxd"
     - name: QQ
-      url: "img/qq.jpg"
+      url: "https://qm.qq.com/q/NDBeChnAm4"
     - name: WeChat
       url: "img/wechat.jpg"
     - name: email

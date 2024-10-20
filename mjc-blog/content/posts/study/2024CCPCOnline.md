@@ -64,8 +64,8 @@ int main(){
 ## K 取沙子游戏
 
 奇数时，一直取 1 即可。  
-为偶数时，如果 $lowbit(n)<=k$，先手取 $lowbit(n)<=k$，再不断模仿后者即可。  
-反之，随意取后的 $lowbit$ 一定 $<=k$，后手一定获胜  
+为偶数时，如果 $\text{lowbit}(n) \leq k$，先手取 $\text{lowbit}(n) \leq k$，再不断模仿后者即可。  
+反之，随意取后的 $\text{lowbit}$ 一定 $\leq k$，后手一定获胜  
 
 ```c
 #include <bits/stdc++.h>
@@ -148,7 +148,7 @@ int main(){
 ## D 编码器-解码器
 
 观察题目  
-$S_i'=\begin{cases}S_{i-1}'+a_i+S_{i-1}'&\text{if}i>1\\a_1&\text{if}i=1\end{cases}$
+$S_i'=\begin{cases}S_{i-1}'+a_i+S_{i-1}'& i>1\\\a_1&i=1\end{cases}$
 可以发现 $S_{i}'$ 是由 $S_{i-1}'$ 变换而来的，所以可以递推每一位 $i$ 上的答案  
 可以开一个三维数组 $f[i][l][r]$ : $i$ 指第几位  $l$ 指从 $t$ 的第几位开始  $r$ 指到 $t$ 的第几位结束  
 通过这种方法，我们可以记录 $t$ 的所有子串在当前 $i$ 位出现的次数，只需要将我们需要的子串拼接起来即可得到能找到的 $t$ 串数量 
@@ -202,3 +202,4 @@ int main(){
     return 0;
 }
 ```
+
