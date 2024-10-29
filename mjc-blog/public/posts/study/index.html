@@ -192,6 +192,30 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Codeforces Round 982 (Div. 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e2&#43;7, mod=1e9&#43;7; void solve(){ int n; cin&gt;&gt;n; int mx,my; mx=my=-1; for(int i=1;i&lt;=n;i&#43;&#43;){ int x,y; cin&gt;&gt;x&gt;&gt;y; mx=max(mx,x); my=max(my,y); } cout&lt;&lt;(mx&#43;my)*2&lt;&lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; } for(int i=1;i&lt;=n;i&#43;&#43;){ int tmp=i-1; for(int j=i&#43;1;j&lt;=n;j&#43;&#43;){ if(a[j]&gt;a[i])tmp&#43;&#43;; }...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-29 21:35:54 +0800 CST'>2024-10-29</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to Codeforces Round 982 (Div. 2)" href="https://mjc.us.kg/posts/study/cf982/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Codeforces Round 979 (Div. 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>C. A TRUE Battle 如果开头和结尾有 $1$，那么一定 Alice 胜 如果中间有相邻的两个 $1$，那么 Alice 可以先选这俩中间 Or 再任选一边 Or 最后一定胜 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void solve(){ int n; string s; cin&gt;&gt;s; if(s[0]==&#39;1&#39;||s[n-1]==&#39;1&#39;)cout&lt;&lt;&#34;YES\n&#34;; for(int i=0;i&lt;n;i&#43;&#43;){ if((s[i]-&#39;0&#39;)&amp;&amp;(s[i&#43;1]-&#39;0&#39;)==1){ cout&lt;&lt;&#34;YES\n&#34;; return; } } cout&lt;&lt;&#34;NO\n&#34;; } int main(){ int t; cin&gt;&gt;t; while(t--)solve(); } D. QED’s Favorite Permutation 观察题目发现，除非出现 $LR$ 这样的片段，不然就会形成一个片段，这个片段中的每个元素都可以互换位置。 那...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-23 18:06:23 +0800 CST'>2024-10-23</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to Codeforces Round 979 (Div. 2)" href="https://mjc.us.kg/posts/study/cf979/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">ICPC 2023 沈阳 VP
     </h2>
   </header>
@@ -344,30 +368,6 @@
   </div>
   <footer class="entry-footer"><span title='2024-08-26 17:52:28 +0800 CST'>2024-08-26</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;KiritoXD</footer>
   <a class="entry-link" aria-label="post link to 2024萌新联赛6" href="https://mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B6/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">2024萌新联赛5
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2024 河南萌新联赛 5 平方根 直接 $sqrt$ 向下取整即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; int main(){ int t; cin&gt;&gt;t; while(t--){ unsigned long long n; cin&gt;&gt;n; long long ans=floor(sqrt(n)); cout&lt;&lt;ans&lt;&lt;endl; } } 爬楼梯 递归 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; int main(){ int f[1000005],mod=1e9&#43;7; f[0]=f[1]=1; int n; cin&gt;&gt;n; for(int i=2;i&lt;=n;i&#43;&#43;){ for(int j=1;j&lt;=3;j&#43;&#43;){ if(i-j&lt;0)break; f[i]=(f[i]&#43;f[i-j])%mod; } } cout&lt;&lt;f[n]&lt;&lt;endl; } 区间问题 1 线段树板 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; typedef long long ll; const int N = 1e5 &#43; 7; #define ls (now &lt;&lt; 1) #define rs (now &lt;&lt; 1 | 1) #define int long long int n, m; int a[N]; struct Node { int len, sum, tag; } tr[N &lt;&lt; 2]; Node operator &#43; (const Node &amp;l, const Node &amp;r) { Node a; a.sum...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-08-17 22:45:18 +0800 CST'>2024-08-17</span>&nbsp;·&nbsp;4 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to 2024萌新联赛5" href="https://mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B5/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">ABC366
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>AtCoder Beginner Contest 366 补题 A - Election 2 判断当前是否有值大于 $n/2$ 即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; typedef long long ll; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 const int N = 1e5&#43;7, mod = 1e9&#43;7; void solve(){ int n,t,a; cin&gt;&gt;n&gt;&gt;t&gt;&gt;a; if(n==1&amp;&amp;t==0&amp;&amp;a==0){ cout&lt;&lt;&#34;No\n&#34;; } else if(t&gt;n/2||a&gt;n/2){ cout&lt;&lt;&#34;Yes\n&#34;; } else cout&lt;&lt;&#34;No\n&#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&gt;&gt;t; while(t--)solve(); return 0; } B - Vertical Writing 翻转字符串，同时对翻转后的每行从末尾开始清 * 即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; typedef long long ll; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 const int N = 1e5&#43;7, mod = 1e9&#43;7; void solve(){ int n,mx=0; cin&gt;&gt;n; string s[N]; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;s[i]; mx=max(mx,(int)s[i].length()); } string ans[mx&#43;1]; for(int i=0;i&lt;mx;i&#43;&#43;){...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-08-11 12:29:38 +0800 CST'>2024-08-11</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to ABC366" href="https://mjc.us.kg/posts/study/abc366/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

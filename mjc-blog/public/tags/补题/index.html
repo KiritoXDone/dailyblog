@@ -171,6 +171,30 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Codeforces Round 982 (Div. 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e2&#43;7, mod=1e9&#43;7; void solve(){ int n; cin&gt;&gt;n; int mx,my; mx=my=-1; for(int i=1;i&lt;=n;i&#43;&#43;){ int x,y; cin&gt;&gt;x&gt;&gt;y; mx=max(mx,x); my=max(my,y); } cout&lt;&lt;(mx&#43;my)*2&lt;&lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; } for(int i=1;i&lt;=n;i&#43;&#43;){ int tmp=i-1; for(int j=i&#43;1;j&lt;=n;j&#43;&#43;){ if(a[j]&gt;a[i])tmp&#43;&#43;; }...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-29 21:35:54 +0800 CST'>2024-10-29</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to Codeforces Round 982 (Div. 2)" href="https://mjc.us.kg/posts/study/cf982/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Codeforces Round 979 (Div. 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>C. A TRUE Battle 如果开头和结尾有 $1$，那么一定 Alice 胜 如果中间有相邻的两个 $1$，那么 Alice 可以先选这俩中间 Or 再任选一边 Or 最后一定胜 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void solve(){ int n; string s; cin&gt;&gt;s; if(s[0]==&#39;1&#39;||s[n-1]==&#39;1&#39;)cout&lt;&lt;&#34;YES\n&#34;; for(int i=0;i&lt;n;i&#43;&#43;){ if((s[i]-&#39;0&#39;)&amp;&amp;(s[i&#43;1]-&#39;0&#39;)==1){ cout&lt;&lt;&#34;YES\n&#34;; return; } } cout&lt;&lt;&#34;NO\n&#34;; } int main(){ int t; cin&gt;&gt;t; while(t--)solve(); } D. QED’s Favorite Permutation 观察题目发现，除非出现 $LR$ 这样的片段，不然就会形成一个片段，这个片段中的每个元素都可以互换位置。 那...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-23 18:06:23 +0800 CST'>2024-10-23</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to Codeforces Round 979 (Div. 2)" href="https://mjc.us.kg/posts/study/cf979/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">ICPC 2023 沈阳 VP
     </h2>
   </header>
@@ -323,30 +347,6 @@
   </div>
   <footer class="entry-footer"><span title='2024-08-11 12:29:38 +0800 CST'>2024-08-11</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;KiritoXD</footer>
   <a class="entry-link" aria-label="post link to ABC366" href="https://mjc.us.kg/posts/study/abc366/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">2024HDU4
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2024 杭电多校 4 补题 多层血条 模拟, 只会最覆盖最上面的一层血量, 所以不用担心下层血量是什么, 只用找到最上面的那一层是什么即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; string h=&#34;ABCDE&#34;; void solve(){ int n,m,hp,dmg; cin&gt;&gt;n&gt;&gt;m&gt;&gt;hp&gt;&gt;dmg; int lst=(hp/m)%5,x=m; string upp; upp.resize(m&#43;1,&#39; &#39;); if(hp&lt;=m){ for(int i=1;i&lt;=hp;i&#43;&#43;)upp[i]=h[0],x=i; } else{ int rest=hp%m; // cout&lt;&lt;rest&lt;&lt;endl; for(int i=1;i&lt;=m;i&#43;&#43;){ if(rest)upp[i]=h[lst],x=i,rest--; else upp[i]=h[(lst-1&#43;5)%5]; } } while(dmg){ if(upp[x]==&#39;.&#39;)break; upp[x]=&#39;.&#39;; x--; dmg--; if(x==0)x=m; } for(int i=0;i&lt;=n&#43;1;i&#43;&#43;){ for(int j=0;j&lt;=m&#43;1;j&#43;&#43;){ if((i==0&amp;&amp;j==0)||(i==0&amp;&amp;j==m&#43;1)||(i==n&#43;1&amp;&amp;j==0)||(i==n&#43;1&amp;&amp;j==m&#43;1))cout&lt;&lt;&#34;&#43;&#34;; else if(i==0||i==n&#43;1)cout&lt;&lt;&#34;-&#34;; else if(j==0||j==m&#43;1)cout&lt;&lt;&#34;|&#34;; else cout&lt;&lt;upp[j]; } cout&lt;&lt;endl; } } int main(){ int t; cin&gt;&gt;t; while(t--)solve(); return 0; } 昵称检索 昵称分姓名和生日两部分,...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-08-10 10:28:15 +0800 CST'>2024-08-10</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to 2024HDU4" href="https://mjc.us.kg/posts/study/2024hdu4/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">2024萌新联赛4
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2024 萌新联赛 4 D 简单的素数 遍历 $1 \sim \sqrt{n}$ 即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; const int N = 1e8&#43;10; void solve(){ int n,flag=0; cin&gt;&gt;n; for(int i=2;i*i&lt;=n;i&#43;&#43;){ if(n%i==0){ flag=1; break; } } cout&lt;&lt;(flag?&#34;No\n&#34;:&#34;Yes\n&#34;); } int main(){ int t; cin&gt;&gt;t; while(t--)solve(); } F 小雷的算式 按题意模拟 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; typedef long long ll; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 const int N = 1e5&#43;7, mod = 1e9&#43;7; #define int long long void solve(){ string s; cin&gt;&gt;s; int ans=0,tmp=0; vector&lt;int&gt;a; for(int i=0;i&lt;s.size();i&#43;&#43;){ if(s[i]==&#39;&#43;&#39;){ a.push_back(tmp); ans&#43;=tmp,tmp=0; } else{ tmp*=10; tmp&#43;=(s[i]-&#39;0&#39;); } } a.push_back(tmp); ans&#43;=tmp; sort(a.begin(),a.end(),greater&lt;int&gt;()); cout&lt;&lt;a[0]; for(int i=1;i&lt;a.size();i&#43;&#43;){ cout&lt;&lt;&#34;&#43;&#34;&lt;&lt;a[i]; } cout&lt;&lt;endl&lt;&lt;ans&lt;&lt;endl; } signed main(){ int t=1; // cin&gt;&gt;t; while(t--)solve(); return 0; } H 聪明且狡猾的恶魔 $1$ 号恶魔...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-08-08 22:44:47 +0800 CST'>2024-08-08</span>&nbsp;·&nbsp;4 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to 2024萌新联赛4" href="https://mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B4/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

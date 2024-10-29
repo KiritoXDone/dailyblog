@@ -6,8 +6,22 @@
     <description>Recent content in 补题 on KiritoXD&#39;s Blog</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 20 Oct 2024 17:04:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2024 21:35:54 +0800</lastBuildDate>
     <atom:link href="https://mjc.us.kg/tags/%E8%A1%A5%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces Round 982 (Div. 2)</title>
+      <link>https://mjc.us.kg/posts/study/cf982/</link>
+      <pubDate>Tue, 29 Oct 2024 21:35:54 +0800</pubDate>
+      <guid>https://mjc.us.kg/posts/study/cf982/</guid>
+      <description>A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e2+7, mod=1e9+7; void solve(){ int n; cin&amp;gt;&amp;gt;n; int mx,my; mx=my=-1; for(int i=1;i&amp;lt;=n;i++){ int x,y; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y; mx=max(mx,x); my=max(my,y); } cout&amp;lt;&amp;lt;(mx+my)*2&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;a[i]; } for(int i=1;i&amp;lt;=n;i++){ int tmp=i-1; for(int j=i+1;j&amp;lt;=n;j++){ if(a[j]&amp;gt;a[i])tmp++; }</description>
+    </item>
+    <item>
+      <title>Codeforces Round 979 (Div. 2)</title>
+      <link>https://mjc.us.kg/posts/study/cf979/</link>
+      <pubDate>Wed, 23 Oct 2024 18:06:23 +0800</pubDate>
+      <guid>https://mjc.us.kg/posts/study/cf979/</guid>
+      <description>C. A TRUE Battle 如果开头和结尾有 $1$，那么一定 Alice 胜 如果中间有相邻的两个 $1$，那么 Alice 可以先选这俩中间 Or 再任选一边 Or 最后一定胜 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void solve(){ int n; string s; cin&amp;gt;&amp;gt;s; if(s[0]==&amp;#39;1&amp;#39;||s[n-1]==&amp;#39;1&amp;#39;)cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; for(int i=0;i&amp;lt;n;i++){ if((s[i]-&amp;#39;0&amp;#39;)&amp;amp;&amp;amp;(s[i+1]-&amp;#39;0&amp;#39;)==1){ cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; return; } } cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); } D. QED&amp;rsquo;s Favorite Permutation 观察题目发现，除非出现 $LR$ 这样的片段，不然就会形成一个片段，这个片段中的每个元素都可以互换位置。 那</description>
+    </item>
     <item>
       <title>ICPC 2023 沈阳 VP</title>
       <link>https://mjc.us.kg/posts/study/icpc2023shenyang/</link>
