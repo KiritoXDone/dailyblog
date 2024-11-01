@@ -9,16 +9,16 @@
 <meta name="keywords" content="补题">
 <meta name="description" content="A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e2&#43;7, mod=1e9&#43;7; void solve(){ int n; cin&gt;&gt;n; int mx,my; mx=my=-1; for(int i=1;i&lt;=n;i&#43;&#43;){ int x,y; cin&gt;&gt;x&gt;&gt;y; mx=max(mx,x); my=max(my,y); } cout&lt;&lt;(mx&#43;my)*2&lt;&lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; } for(int i=1;i&lt;=n;i&#43;&#43;){ int tmp=i-1; for(int j=i&#43;1;j&lt;=n;j&#43;&#43;){ if(a[j]&gt;a[i])tmp&#43;&#43;; }">
 <meta name="author" content="KiritoXD">
-<link rel="canonical" href="https://mjc.us.kg/posts/study/cf982/">
+<link rel="canonical" href="https://blog.mjc.us.kg/posts/study/cf982/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://mjc.us.kg/img/a.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mjc.us.kg/img/a.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mjc.us.kg/img/a.png">
-<link rel="apple-touch-icon" href="https://mjc.us.kg/img/a.png">
-<link rel="mask-icon" href="https://mjc.us.kg/img/a.png">
+<link rel="icon" href="https://blog.mjc.us.kg/img/a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.mjc.us.kg/img/a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.mjc.us.kg/img/a.png">
+<link rel="apple-touch-icon" href="https://blog.mjc.us.kg/img/a.png">
+<link rel="mask-icon" href="https://blog.mjc.us.kg/img/a.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://mjc.us.kg/posts/study/cf982/">
+<link rel="alternate" hreflang="zh" href="https://blog.mjc.us.kg/posts/study/cf982/">
 <noscript>
     <style>
         #theme-toggle,
@@ -83,7 +83,7 @@
 <meta property="og:title" content="Codeforces Round 982 (Div. 2)" />
 <meta property="og:description" content="A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e2&#43;7, mod=1e9&#43;7; void solve(){ int n; cin&gt;&gt;n; int mx,my; mx=my=-1; for(int i=1;i&lt;=n;i&#43;&#43;){ int x,y; cin&gt;&gt;x&gt;&gt;y; mx=max(mx,x); my=max(my,y); } cout&lt;&lt;(mx&#43;my)*2&lt;&lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; } for(int i=1;i&lt;=n;i&#43;&#43;){ int tmp=i-1; for(int j=i&#43;1;j&lt;=n;j&#43;&#43;){ if(a[j]&gt;a[i])tmp&#43;&#43;; }" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mjc.us.kg/posts/study/cf982/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://blog.mjc.us.kg/posts/study/cf982/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-10-29T21:35:54+08:00" />
 <meta property="article:modified_time" content="2024-10-29T21:35:54+08:00" />
 
@@ -101,19 +101,19 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://mjc.us.kg/posts/"
+      "item": "https://blog.mjc.us.kg/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "👨🏻‍💻 技术",
-      "item": "https://mjc.us.kg/posts/study/"
+      "item": "https://blog.mjc.us.kg/posts/study/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "Codeforces Round 982 (Div. 2)",
-      "item": "https://mjc.us.kg/posts/study/cf982/"
+      "item": "https://blog.mjc.us.kg/posts/study/cf982/"
     }
   ]
 }
@@ -139,14 +139,14 @@
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://mjc.us.kg/posts/study/cf982/"
+    "@id": "https://blog.mjc.us.kg/posts/study/cf982/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "KiritoXD's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mjc.us.kg/img/a.png"
+      "url": "https://blog.mjc.us.kg/img/a.png"
     }
   }
 }
@@ -168,8 +168,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://mjc.us.kg/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
-                <img src="https://mjc.us.kg/img/a.png" alt="" aria-label="logo"
+            <a href="https://blog.mjc.us.kg/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
+                <img src="https://blog.mjc.us.kg/img/a.png" alt="" aria-label="logo"
                     height="35">KiritoXD&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -196,27 +196,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://mjc.us.kg/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.mjc.us.kg/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
                     <span>🔍 搜索</span>
                 </a>
             </li>
             <li>
-                <a href="https://mjc.us.kg/" title="🏠 主页">
+                <a href="https://blog.mjc.us.kg/" title="🏠 主页">
                     <span>🏠 主页</span>
                 </a>
             </li>
             <li>
-                <a href="https://mjc.us.kg/posts" title="📚 文章">
+                <a href="https://blog.mjc.us.kg/posts" title="📚 文章">
                     <span>📚 文章</span>
                 </a>
             </li>
             <li>
-                <a href="https://mjc.us.kg/tags" title="🧩 标签">
+                <a href="https://blog.mjc.us.kg/tags" title="🧩 标签">
                     <span>🧩 标签</span>
                 </a>
             </li>
             <li>
-                <a href="https://mjc.us.kg/archives/" title="⏱️ 时间轴">
+                <a href="https://blog.mjc.us.kg/archives/" title="⏱️ 时间轴">
                     <span>⏱️ 时间轴</span>
                 </a>
             </li>
@@ -227,7 +227,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://mjc.us.kg/">主页</a>&nbsp;»&nbsp;<a href="https://mjc.us.kg/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://mjc.us.kg/posts/study/">👨🏻‍💻 技术</a></div>
+    <div class="breadcrumbs"><a href="https://blog.mjc.us.kg/">主页</a>&nbsp;»&nbsp;<a href="https://blog.mjc.us.kg/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://blog.mjc.us.kg/posts/study/">👨🏻‍💻 技术</a></div>
     <h1 class="post-title entry-hint-parent">
       Codeforces Round 982 (Div. 2)
     </h1>
@@ -497,10 +497,15 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://mjc.us.kg/tags/%E8%A1%A5%E9%A2%98/">补题</a></li>
+      <li><a href="https://blog.mjc.us.kg/tags/%E8%A1%A5%E9%A2%98/">补题</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://mjc.us.kg/posts/study/cf979/">
+  <a class="prev" href="https://blog.mjc.us.kg/posts/study/cfe171/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>Educational Codeforces Round 171</span>
+  </a>
+  <a class="next" href="https://blog.mjc.us.kg/posts/study/cf979/">
     <span class="title">下一页 »</span>
     <br>
     <span>Codeforces Round 979 (Div. 2)</span>
@@ -512,7 +517,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://mjc.us.kg/">KiritoXD&#39;s Blog</a></span> · 
+        <span>&copy; 2024 <a href="https://blog.mjc.us.kg/">KiritoXD&#39;s Blog</a></span> · 
 
     <span>
         Powered by

@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://mjc.us.kg/sitemap.xml
+Sitemap: https://blog.mjc.us.kg/sitemap.xml
