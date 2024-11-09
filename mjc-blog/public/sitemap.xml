@@ -2,22 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.mjc.us.kg/posts/study/</loc>
-    <lastmod>2024-11-01T18:12:39+08:00</lastmod>
+    <loc>https://blog.mjc.us.kg/posts/study/template/</loc>
+    <lastmod>2024-11-03T11:37:33+08:00</lastmod>
   </url><url>
-    <loc>https://blog.mjc.us.kg/posts/study/cfe168/</loc>
-    <lastmod>2024-11-01T18:12:39+08:00</lastmod>
+    <loc>https://blog.mjc.us.kg/posts/life/tools/</loc>
+    <lastmod>2024-10-31T20:58:59+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/</loc>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/cfe167/</loc>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/</loc>
-    <lastmod>2024-11-01T18:12:39+08:00</lastmod>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/posts/</loc>
-    <lastmod>2024-11-01T18:12:39+08:00</lastmod>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/tags/</loc>
-    <lastmod>2024-11-01T18:12:39+08:00</lastmod>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/tags/%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2024-11-09T17:42:25+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/cf984/</loc>
+    <lastmod>2024-11-09T17:38:16+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/icpc2024chengdu/</loc>
+    <lastmod>2024-11-08T21:36:35+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/hpuacm1103/</loc>
+    <lastmod>2024-11-05T17:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2024-11-03T11:37:33+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/cf983/</loc>
+    <lastmod>2024-11-02T18:07:13+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.mjc.us.kg/posts/study/cfe168/</loc>
     <lastmod>2024-11-01T18:12:39+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/posts/study/cfe169/</loc>
@@ -27,9 +51,6 @@
     <lastmod>2024-10-31T20:58:59+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/posts/life/</loc>
-    <lastmod>2024-10-31T20:58:59+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.mjc.us.kg/posts/life/tools/</loc>
     <lastmod>2024-10-31T20:58:59+08:00</lastmod>
   </url><url>
     <loc>https://blog.mjc.us.kg/posts/study/cfe171/</loc>

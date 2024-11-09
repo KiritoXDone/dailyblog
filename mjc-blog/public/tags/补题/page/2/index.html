@@ -171,6 +171,66 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Codeforces Round 974 (Div. 3)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A Robin Helps 按题意模拟 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; int n,ans,a[N],cnt,k; void solve(){ cnt=ans=0; cin&gt;&gt;n&gt;&gt;k; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; if(a[i]&gt;=k)cnt&#43;=a[i]; if(!a[i]&amp;&amp;cnt)cnt--,ans&#43;&#43;; } cout&lt;&lt;ans&lt;&lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; } B. Robin Hood and the Major Oak 显然只有最后 $k$ 个点有效，$i^i$ 的奇偶性只和 $i$ 有关，公式加和即可 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define endl &#39;\n&#39; typedef long long ll; const int N = 1e5 &#43; 7, mod = 1e9 &#43; 7; ll n, k; void solve() { cin &gt;&gt; n &gt;&gt; k; ll s = (n - k &#43;...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-10 21:07:59 +0800 CST'>2024-10-10</span>&nbsp;·&nbsp;4 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to Codeforces Round 974 (Div. 3)" href="https://blog.mjc.us.kg/posts/study/cf974/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">近日刷题记录 3
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ABC374 C - Separated Lunch 将 $n$ 个数尽量均分，因为最多只有 20 个数据，可以直接暴搜 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) #define int long long const int N=1e5&#43;7, mod=1e9&#43;7; int n,s,ans=INT_MAX; int a[N]; void dfs(int cnt,int sum){ if(cnt==n){ ans=min(ans,max(sum,s-sum)); return; } dfs(cnt&#43;1,sum); dfs(cnt&#43;1,sum&#43;a[cnt&#43;1]); } void solve(){ cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;a[i]; s&#43;=a[i]; } dfs(0,0); cout&lt;&lt;ans&lt;&lt;endl; } signed main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&gt;&gt;t; while(t--)solve(); return 0; } ABC374 E - Sensor Optimization Dilemma 2 易想到二分答案，但是在 $check$ 过程中，对每个进程机器的选择需要考虑 如果直接暴力从 $0$ 到...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-07 22:15:28 +0800 CST'>2024-10-07</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to 近日刷题记录 3" href="https://blog.mjc.us.kg/posts/study/2024102222/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">近日刷题记录 2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AtCoder ABC372 D - Buildings 单调栈，逆向进行，找左侧比他大的数，此时栈的大小即为当前位的答案 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=2e5&#43;7, mod=1e9&#43;7; int n,h[N],ans[N]; stack&lt;int&gt;s; void solve(){ cin&gt;&gt;n; for(int i=1;i&lt;=n;i&#43;&#43;){ cin&gt;&gt;h[i]; } for(int i=n;i&gt;=1;i--){ ans[i]=s.size(); while(s.size()&amp;&amp;s.top()&lt;h[i])s.pop(); s.push(h[i]); } for(int i=1;i&lt;=n;i&#43;&#43;)cout&lt;&lt;ans[i]&lt;&lt;&#34; &#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&gt;&gt;t; while(t--)solve(); return 0; } ABC372 E - K-th Largest Connected Components 并查集，我们可以开 $n$ 个堆，把每个联通块都存到同一个栈当中，查询时栈的大小小于 $k$...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-06 19:05:38 +0800 CST'>2024-10-06</span>&nbsp;·&nbsp;4 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to 近日刷题记录 2" href="https://blog.mjc.us.kg/posts/study/202410/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">近日刷题记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AtCoder ABC371C Make Isomorphic 给你简单的无向图 $G$ 和 $H$ ，每个图都有 $N$ 个顶点：顶点 $1$ 、 $2$ 、 $\ldots$ 、 $N$ 。图 $G$ 有 $M_G$ 条边，其第 $i$ 条边 $(1\leq i\leq M_G)$ 连接顶点 $u_i$ 和 $v_i$ 。图 $H$ 有 $M_H$ 条边，它的第 $i$ 条边 $(1\leq i\leq M_H)$ 连接顶点 $a_i$ 和 $b_i$ 。 您可以在图 $H$ 上执行以下操作，次数不限，可能为零。 选择一对满足 $1\le i&lt;j\leq N$ 的整数 $(i,j)$ 。支付 $A_{i,j}$ 点成本，如果 $H$ 中的顶点 $i$ 和 $j$ 之间...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-04 21:53:44 +0800 CST'>2024-10-04</span>&nbsp;·&nbsp;6 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to 近日刷题记录" href="https://blog.mjc.us.kg/posts/study/202409/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">2024CCPC网络赛
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>前言 好久没写题了，被暴打。 参赛过程也是抽象，开局就罚站 30 min 补题 L 网络预选赛 好不容易卡出来题面，看到 L 已经过了不少了，卡了半天才提交过 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; typedef long long ll; const int N=1e3&#43;7, mod=1e9&#43;7; void solve(){ int n, m, ans = 0; char mp[N][N]; cin &gt;&gt; n &gt;&gt; m; for(int i = 1; i &lt;= n; i&#43;&#43;) for(int j = 1; j &lt;= m; j&#43;&#43;) cin &gt;&gt; mp[i][j]; for(int i = 1; i &lt; n; i&#43;&#43;){ for(int j = 1; j &lt; m; j&#43;&#43;){ if(mp[i][j] ==...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-10 14:45:39 +0800 CST'>2024-09-10</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to 2024CCPC网络赛" href="https://blog.mjc.us.kg/posts/study/2024ccpconline/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">2024萌新联赛6
     </h2>
   </header>
