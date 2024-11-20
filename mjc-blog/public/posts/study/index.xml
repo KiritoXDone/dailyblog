@@ -1,312 +1,333 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>👨🏻‍💻 技术 on KiritoXD&#39;s Blog</title>
-    <link>https://blog.mjc.us.kg/posts/study/</link>
-    <description>Recent content in 👨🏻‍💻 技术 on KiritoXD&#39;s Blog</description>
+    <title>📖 学习 on KiritoXD&#39;s Blog</title>
+    <link>https://blog.050623.xyz/posts/study/</link>
+    <description>Recent content in 📖 学习 on KiritoXD&#39;s Blog</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Nov 2024 17:42:25 +0800</lastBuildDate>
-    <atom:link href="https://blog.mjc.us.kg/posts/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Nov 2024 20:30:48 +0800</lastBuildDate>
+    <atom:link href="https://blog.050623.xyz/posts/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Template</title>
-      <link>https://blog.mjc.us.kg/posts/study/template/</link>
+      <link>https://blog.050623.xyz/posts/study/template/</link>
       <pubDate>Sun, 03 Nov 2024 11:37:33 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/template/</guid>
+      <guid>https://blog.050623.xyz/posts/study/template/</guid>
       <description>杂项 加速 sync_with_stdio(0);cin.tie(0);cout.tie(0) 随机数 : random_device 或 chrono::system_clock::now().time_since_epoch().count() 最短路 dijkstra $O(mlogn)$ struct Node { int y, v; Node(int _y, int _v) { y = _y, v = _v; } }; int n, m, s, t, dist[100005]; vector&amp;lt;Node&amp;gt; edge[100005]; set&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q; void dijkstra(int s, int t) { q.clear(); memset(dist, 127, sizeof(dist)); dist[s] = 0; for (int i = 1; i &amp;lt;= n; i++) q.insert({dist[i], i}); for (; !q.empty();) { int x = q.begin()-&amp;gt;second; q.erase(q.begin()); if (x == t || dist[x] &amp;gt; 1 &amp;lt;&amp;lt; 30) break; for (auto i : edge[x]) { if (dist[x] + i.v &amp;lt; dist[i.y]) { q.erase({dist[i.y], i.y}); dist[i.y] = dist[x] + i.v; q.insert({dist[i.y], i.y}); } } } cout &amp;lt;&amp;lt; dist[t] &amp;lt;&amp;lt; endl; } SPFA $O(km)$ k 为常数，最差为 $O(nm)$ struct Node{ int v,w; }; vector&amp;lt;Node&amp;gt;edge[N]; int</description>
     </item>
     <item>
+      <title>ICPC2024shanghai</title>
+      <link>https://blog.050623.xyz/posts/study/icpc2024shanghai/</link>
+      <pubDate>Wed, 20 Nov 2024 20:30:48 +0800</pubDate>
+      <guid>https://blog.050623.xyz/posts/study/icpc2024shanghai/</guid>
+      <description>前言 铁了，唉，赛时发挥一坨屎 I. In Search of the Ultimate Artifact 赛时一眼盯真，鉴定为纯纯的暴力，自己写了会发现老是不对，让队长上机调了几分钟过了 题意即每次选当前最大的 $k$ 个数相乘，求最后能得到的最大的数是多少，对这个最大的数取模 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=2e5+7, mod=998244353; int n,k; ll a[N]; void solve(){ cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; for(int i=1;i&amp;lt;=n;i++)cin&amp;gt;&amp;gt;a[i]; sort(a+1,a+1+n,greater&amp;lt;ll&amp;gt;()); ll ans=a[1]%mod; deque&amp;lt;int&amp;gt;q;</description>
+    </item>
+    <item>
+      <title>Educational Codeforces Round 166 (Rated for Div. 2)</title>
+      <link>https://blog.050623.xyz/posts/study/cfe166/</link>
+      <pubDate>Mon, 11 Nov 2024 16:45:30 +0800</pubDate>
+      <guid>https://blog.050623.xyz/posts/study/cfe166/</guid>
+      <description>A. Verify Password 先判断前缀中的数字片段，如果有相邻递减的就 No 连续的看完之后看后面的字母片段，如果有数字，就 No，同时也要保持非递减 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; const int N = 2e5 + 10; void solve() { int n; string s,tmp=&amp;#34;&amp;#34;; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;s; for(int i=0;i&amp;lt;n;i++){ if(s[i]&amp;gt;=&amp;#39;0&amp;#39;&amp;amp;&amp;amp;s[i]&amp;lt;=&amp;#39;9&amp;#39;){ tmp+=s[i]; } else break; } if (!tmp.empty()) { for (int i = 0; i &amp;lt; tmp.size() - 1; i++) { if (tmp[i] &amp;gt; tmp[i + 1]) { cout &amp;lt;&amp;lt; &amp;#34;NO\n&amp;#34;; return; } } } for(int i=tmp.size();i&amp;lt;n-1;i++){ if(s[i]&amp;gt;=&amp;#39;0&amp;#39;&amp;amp;&amp;amp;s[i]&amp;lt;=&amp;#39;9&amp;#39;){ cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; return; } if(s[i]&amp;gt;s[i+1]){ cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; return; } } cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; } int main() { ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</description>
+    </item>
+    <item>
+      <title>Educational Codeforces Round 164 (Rated for Div. 2)</title>
+      <link>https://blog.050623.xyz/posts/study/cfe164/</link>
+      <pubDate>Mon, 11 Nov 2024 15:51:14 +0800</pubDate>
+      <guid>https://blog.050623.xyz/posts/study/cfe164/</guid>
+      <description>A. Painting the Ribbon 显然，Alice 的理想操作是每种颜色均匀分布 而 Bob 的理想操作是选择当前数量最多的颜色，将其他的都喷为这个颜色 所以只要判断 k 是否大于 $n-mx$ 即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n,m,k; void solve(){ cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;k; if(m==1||k&amp;gt;=n-1){ cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; return; } int ned=n-ceil(1.0*n/m); if(k&amp;lt;ned)cout&amp;lt;&amp;lt;&amp;#34;Yes\n&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Make It Ugly 注意到，操作只会使中间的元素</description>
+    </item>
+    <item>
       <title>Educational Codeforces Round 167 (Rated for Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cfe167/</link>
+      <link>https://blog.050623.xyz/posts/study/cfe167/</link>
       <pubDate>Sat, 09 Nov 2024 17:42:25 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cfe167/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cfe167/</guid>
       <description>A. Catch the Coin 对每个枚硬币分别判断即可 只要其 y 轴上的距离能够赶上，一定能取到 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; void solve(){ int x,y; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y; int mn=-abs(x),mx=abs(x); if(y-abs(x)+1&amp;lt;mn)cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Substring and Subsequence 只能 $O(n^2)$ 对每一位判断其后方有多少个相同的即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; void solve(){ string s,t; cin&amp;gt;&amp;gt;s&amp;gt;&amp;gt;t; int ans=s.size()+t.size(); for(int</description>
     </item>
     <item>
       <title>Codeforces Round 984 (Div. 3)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf984/</link>
+      <link>https://blog.050623.xyz/posts/study/cf984/</link>
       <pubDate>Sat, 09 Nov 2024 17:38:16 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf984/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf984/</guid>
       <description>A. Quintomania 照题意模拟下去即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n; int a[N]; void solve(){ cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++)cin&amp;gt;&amp;gt;a[i]; for(int i=1;i&amp;lt;n;i++){ if(abs(a[i+1]-a[i])!=5&amp;amp;&amp;amp;abs(a[i+1]-a[i])!=7){ cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; return; } } cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Startup 记录每种牌子的总价值，排序后从大到小取 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; #define int long long const int N=2e5+7, mod=1e9+7; struct Node{ ll id,val; bool operator&amp;lt;(const Node &amp;amp;a){return val&amp;gt;a.val;} }; int n,k; int b[N],c[N]; map&amp;lt;int,int&amp;gt;vis; void solve(){ cin&amp;gt;&amp;gt;k&amp;gt;&amp;gt;n; vis.clear(); for(int i=1;i&amp;lt;=n;i++)cin&amp;gt;&amp;gt;b[i]&amp;gt;&amp;gt;c[i]; for(int i=1;i&amp;lt;=n;i++){ vis[b[i]]+=c[i]; }</description>
     </item>
     <item>
       <title>ICPC2024chengdu</title>
-      <link>https://blog.mjc.us.kg/posts/study/icpc2024chengdu/</link>
+      <link>https://blog.050623.xyz/posts/study/icpc2024chengdu/</link>
       <pubDate>Fri, 08 Nov 2024 21:36:35 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/icpc2024chengdu/</guid>
+      <guid>https://blog.050623.xyz/posts/study/icpc2024chengdu/</guid>
       <description>L. Recover Statistics 直接按要求输出 100 个数即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now &amp;lt;&amp;lt; 1 #define rs now &amp;lt;&amp;lt; 1 | 1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x) &amp;amp; (-x)) typedef long long ll; const int N = 1e5 + 7, mod = 1e9 + 7; void solve() { int a,b,c; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;c; cout&amp;lt;&amp;lt;100&amp;lt;&amp;lt;endl; for(int i=1;i&amp;lt;=50;i++){ cout&amp;lt;&amp;lt;a&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } for(int i=1;i&amp;lt;=45;i++){ cout&amp;lt;&amp;lt;b&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } for(int i=1;i&amp;lt;=4;i++){ cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;c+1; } int main() { ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); int t = 1; // cin &amp;gt;&amp;gt; t; while (t--) solve(); return 0; } J. Grand Prix of Ballance 按题意模拟即可 赛时榜歪了，应该直接上机写的 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now &amp;lt;&amp;lt; 1 #define rs now &amp;lt;&amp;lt;</description>
     </item>
     <item>
       <title>Hpuacm1103</title>
-      <link>https://blog.mjc.us.kg/posts/study/hpuacm1103/</link>
+      <link>https://blog.050623.xyz/posts/study/hpuacm1103/</link>
       <pubDate>Tue, 05 Nov 2024 17:00:13 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/hpuacm1103/</guid>
+      <guid>https://blog.050623.xyz/posts/study/hpuacm1103/</guid>
       <description>牛魔的 vs code 刚开场就炸了，debug 纯靠输出在调 L - 附加题1 读题可发现，只有相邻的会有干扰，那么除了第一个是 k 种可能，其他的都是 (k-1) 种选择 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) #define int long long typedef long long ll; const int N=1e5+7, mod=1e9+7; int ans=0,n,k; void solve(){ cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; ans=k; for(int i=2;i&amp;lt;=n;i++){ ans*=(k-1); } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } signed main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } C - SYease 开始想用 dp 暴力写，喜提超时，然后暴</description>
     </item>
     <item>
       <title>Codeforces Round 983 (Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf983/</link>
+      <link>https://blog.050623.xyz/posts/study/cf983/</link>
       <pubDate>Sat, 02 Nov 2024 18:07:13 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf983/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf983/</guid>
       <description>牛魔的渣机 ChromeBook A. Circuit 每盏灯对应的开关有一个为 on 时是亮的，其他时候都为熄灭 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n; int off,on; void solve(){ cin&amp;gt;&amp;gt;n; on=off=0; for(int i=1;i&amp;lt;=2*n;i++){ int x; cin&amp;gt;&amp;gt;x; if(x==1)on++; else off++; } int ans1=0,ans2=0; if(on&amp;lt;=n)ans2=on; else{ ans2=n-(on-n); } ans1=n-on/2-off/2; cout&amp;lt;&amp;lt;ans1&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;ans2&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Medians 开始题没看完，分的区间长度也必须全为奇数，能分的都分成三个即可，再考虑如果左右的个</description>
     </item>
     <item>
       <title>Educational Codeforces Round 168 (Rated for Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cfe168/</link>
+      <link>https://blog.050623.xyz/posts/study/cfe168/</link>
       <pubDate>Fri, 01 Nov 2024 18:12:39 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cfe168/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cfe168/</guid>
       <description>A. Strong Password 只需要在相邻字母相同的位置插入一个不同的即可，如果没有这种位置，就在字符串末尾插入一个与当前末尾不同的字符即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void solve() { string s, ans; cin &amp;gt;&amp;gt; s; int pos = -1; for (int i = 1; i &amp;lt; s.size(); i++) { if (s[i] == s[i - 1]) { pos = i; break; } } if (pos == -1) { ans = s + (s[s.size() - 1] == &amp;#39;a&amp;#39; ? &amp;#39;b&amp;#39; : &amp;#39;a&amp;#39;); } else { if (s[pos] == &amp;#39;a&amp;#39;) ans = s.substr(0, pos) + &amp;#34;b&amp;#34; + s.substr(pos, s.size() - pos); else ans = s.substr(0, pos)</description>
     </item>
     <item>
       <title>Educational Codeforces Round 169 (Rated for Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cfe169/</link>
+      <link>https://blog.050623.xyz/posts/study/cfe169/</link>
       <pubDate>Fri, 01 Nov 2024 17:55:17 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cfe169/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cfe169/</guid>
       <description>A. Closest Point 可以发现只有两个点且二者不相邻的时候才有答案 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n; int a[N]; void solve(){ cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;a[i]; } sort(a+1,a+1+n); if(n&amp;gt;2){ cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; } else{ if(a[1]+1==a[2])cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;Yes\n&amp;#34;; } } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Game with Doors 相交片段的门一定都要关上，如果两端不重合就多关一扇 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now &amp;lt;&amp;lt; 1 #define rs now &amp;lt;&amp;lt; 1 | 1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x) &amp;amp; (-x)) typedef long long ll;</description>
     </item>
     <item>
       <title>Educational Codeforces Round 171</title>
-      <link>https://blog.mjc.us.kg/posts/study/cfe171/</link>
+      <link>https://blog.050623.xyz/posts/study/cfe171/</link>
       <pubDate>Thu, 31 Oct 2024 18:55:32 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cfe171/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cfe171/</guid>
       <description>A. Perpendicular Segments 两条线取边长为 $min(x,y)$ 的正方形的对角线即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; void solve(){ int x,y,k; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y&amp;gt;&amp;gt;k; x=min(x,y); printf(&amp;#34;0 0 %d %d\n&amp;#34;,x,x); printf(&amp;#34;%d 0 0 %d\n&amp;#34;,x,x); } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Black Cells 易发现，个数为偶数时，答案即为相邻两个差的最大值 个数为奇数时，需要借用一个格子，可以在每个奇数位后插入一个，计算当前数组中的相邻差</description>
     </item>
     <item>
       <title>Codeforces Round 982 (Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf982/</link>
+      <link>https://blog.050623.xyz/posts/study/cf982/</link>
       <pubDate>Tue, 29 Oct 2024 21:35:54 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf982/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf982/</guid>
       <description>A. Rectangle Arrangement 最长和最高相加乘二即为答案 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e2+7, mod=1e9+7; void solve(){ int n; cin&amp;gt;&amp;gt;n; int mx,my; mx=my=-1; for(int i=1;i&amp;lt;=n;i++){ int x,y; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y; mx=max(mx,x); my=max(my,y); } cout&amp;lt;&amp;lt;(mx+my)*2&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Stalin Sort $n\leq2000$ 直接 $O(n^2)$ 查找当前位后有几个比他大的，都删去 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n; int a[N]; void solve(){ int ans=INT_MAX; cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;a[i]; } for(int i=1;i&amp;lt;=n;i++){ int tmp=i-1; for(int j=i+1;j&amp;lt;=n;j++){ if(a[j]&amp;gt;a[i])tmp++; }</description>
     </item>
     <item>
       <title>Codeforces Round 979 (Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf979/</link>
+      <link>https://blog.050623.xyz/posts/study/cf979/</link>
       <pubDate>Wed, 23 Oct 2024 18:06:23 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf979/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf979/</guid>
       <description>C. A TRUE Battle 如果开头和结尾有 $1$，那么一定 Alice 胜 如果中间有相邻的两个 $1$，那么 Alice 可以先选这俩中间 Or 再任选一边 Or 最后一定胜 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void solve(){ int n; string s; cin&amp;gt;&amp;gt;s; if(s[0]==&amp;#39;1&amp;#39;||s[n-1]==&amp;#39;1&amp;#39;)cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; for(int i=0;i&amp;lt;n;i++){ if((s[i]-&amp;#39;0&amp;#39;)&amp;amp;&amp;amp;(s[i+1]-&amp;#39;0&amp;#39;)==1){ cout&amp;lt;&amp;lt;&amp;#34;YES\n&amp;#34;; return; } } cout&amp;lt;&amp;lt;&amp;#34;NO\n&amp;#34;; } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); } D. QED&amp;rsquo;s Favorite Permutation 观察题目发现，除非出现 $LR$ 这样的片段，不然就会形成一个片段，这个片段中的每个元素都可以互换位置。 那</description>
     </item>
     <item>
       <title>ICPC 2023 沈阳 VP</title>
-      <link>https://blog.mjc.us.kg/posts/study/icpc2023shenyang/</link>
+      <link>https://blog.050623.xyz/posts/study/icpc2023shenyang/</link>
       <pubDate>Sun, 20 Oct 2024 17:04:40 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/icpc2023shenyang/</guid>
+      <guid>https://blog.050623.xyz/posts/study/icpc2023shenyang/</guid>
       <description>C. Swiss Stage 四目 TES 打的像浓 shit，真的恶臭 #include &amp;lt;bits/stdc++.h&amp;gt; #define max(x,y) ((x)&amp;lt;(y)?(y):(x)) #define min(x,y) ((x)&amp;gt;(y)?(y):(x)) #define mk(x,y) make_pair(x,y) #define lson (now&amp;lt;&amp;lt;1) #define rson (now&amp;lt;&amp;lt;1|1) using namespace std; typedef long long ll; const int N=2e5+7,inf=1e9+7; const ll mod=2097152; void solve() { int x,y; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y; int ans[10][10]; ans[0][0]=4; ans[0][1]=4; ans[0][2]=6; ans[1][0]=3; ans[1][1]=3; ans[1][2]=4; ans[2][0]=2; ans[2][1]=2; ans[2][2]=2; cout&amp;lt;&amp;lt;ans[x][y]; } int main() { std::ios::sync_with_stdio(0); std::cin.tie(0); int T=1; // cin&amp;gt;&amp;gt;T; while(T--) { solve(); } return 0; } J. Graft and Transplant 每次只能选度数不为 $1$ 的点，看一共有多少个能选的点即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int</description>
     </item>
     <item>
       <title>网络流学习记录</title>
-      <link>https://blog.mjc.us.kg/posts/study/flow/</link>
+      <link>https://blog.050623.xyz/posts/study/flow/</link>
       <pubDate>Sat, 19 Oct 2024 18:00:00 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/flow/</guid>
+      <guid>https://blog.050623.xyz/posts/study/flow/</guid>
       <description>概述 网络是指一个特殊的有向图 $G=(V,E)$，与一般图不同的是有容量和源汇点 $E$ 中的每条边 $(u,v)$ 都有一个被称为容量的权值，如果某条边 $(u,v)\not\in E$，可以假定 $c(u,v)=0$ $V$ 中有两个特殊的点，源点 $s$ 和汇点 $t$ 对于网络 $G=(V,E)$，流是一个从边集 $E$ 到整数集或实数集的函数，满足以下性质 容量限制：对于每条边</description>
     </item>
     <item>
       <title>ICPC 2022 西安 VP</title>
-      <link>https://blog.mjc.us.kg/posts/study/icpc2022xian/</link>
+      <link>https://blog.050623.xyz/posts/study/icpc2022xian/</link>
       <pubDate>Sat, 19 Oct 2024 17:04:37 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/icpc2022xian/</guid>
+      <guid>https://blog.050623.xyz/posts/study/icpc2022xian/</guid>
       <description>J. Strange Sum 最多选两个，每选当前这个会限制选的范围，那么答案就一定是前面最大的加上现在这个的最大值 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; void solve(){ int n; cin&amp;gt;&amp;gt;n; ll mx=0,ans=0; for(int i=1;i&amp;lt;=n;i++){ ll x; cin&amp;gt;&amp;gt;x; ans=max(ans,x+mx); mx=max(mx,x); } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } C. Clone Ranran 如果要克隆增加人数，一定是先在出题操作前增加的，那么就遍历可能的克隆次数，</description>
     </item>
     <item>
       <title>Educational Codeforces Round 170</title>
-      <link>https://blog.mjc.us.kg/posts/study/cfe170/</link>
+      <link>https://blog.050623.xyz/posts/study/cfe170/</link>
       <pubDate>Wed, 16 Oct 2024 16:22:47 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cfe170/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cfe170/</guid>
       <description>A. Two Screens 找两串相同前缀长度，再加上各自之后的长度 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; string s,t; int ans; void solve(){ cin&amp;gt;&amp;gt;s&amp;gt;&amp;gt;t; ans=0; for(int i=0;i&amp;lt;min(s.size(),t.size());i++){ if(s[i]==t[i]){ ans++; if(i==min(s.size(),t.size())-1){ ans++; ans+=(s.size()-i)+(t.size()-i)-2; } } else{ if(i!=0){ ans++; ans+=(s.size()-i)+(t.size()-i); } else{ ans+=(s.size()-i)+(t.size()-i); } break; } } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Binomial Coefficients, Kind Of 通过打表发现目标输出其实就是 $2^{k[i]}$ #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; #define int long long const int N=1e5+7, mod=1e9+7; ll qpow(int</description>
     </item>
     <item>
       <title>Codeforces Round 978 (Div. 2)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf978/</link>
+      <link>https://blog.050623.xyz/posts/study/cf978/</link>
       <pubDate>Tue, 15 Oct 2024 19:33:54 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf978/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf978/</guid>
       <description>A. Bus to Pénjamo 每个家族优先按排座，统计所有家族多出来的那一个人的总和，看最后剩几排可以让他们单独座，其余人继续坐满一排 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n,r; int a[N]; void solve(){ cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;r; for(int i=1;i&amp;lt;=n;i++)cin&amp;gt;&amp;gt;a[i]; sort(a+1,a+1+n); int ans=0,lft=0; for(int i=n;i&amp;gt;0;i--){ ans+=(a[i]/2)*2; r-=a[i]/2; lft+=a[i]%2; } ans+=min(lft,r); ans-=max(0,(lft-r)); cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Kar Salesman 结论题，最少我们需要数量最大的那个</description>
     </item>
     <item>
       <title>ICPC 2023 南京 VP</title>
-      <link>https://blog.mjc.us.kg/posts/study/icpc2023nanjing/</link>
+      <link>https://blog.050623.xyz/posts/study/icpc2023nanjing/</link>
       <pubDate>Mon, 14 Oct 2024 21:33:28 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/icpc2023nanjing/</guid>
+      <guid>https://blog.050623.xyz/posts/study/icpc2023nanjing/</guid>
       <description>I. Counter 操作可以都想成连续的，那么输入 $a,b$，意为在 $a-b$ 处进行了一次归零，之后连着进行了 $b$ 次操作，如果中间有冲突，即为 NO #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; void solve(){ int n,m,flag=0; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m; map&amp;lt;int,int&amp;gt;vis; for(int i=1;i&amp;lt;=m;i++){ int a,b; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b; if(b&amp;gt;a)flag=1; int l = a - b; if(vis.find(l) != vis.end()){ vis[l] = max(vis[l], a); } else { vis[l] = a; } } int now=-1; for(auto &amp;amp;x:vis){ if(now&amp;gt;=x.first){ flag=1; break; } now=x.second; } cout&amp;lt;&amp;lt;(flag?&amp;#34;No\n&amp;#34;:&amp;#34;Yes\n&amp;#34;); } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; }</description>
     </item>
     <item>
       <title>树形DP</title>
-      <link>https://blog.mjc.us.kg/posts/study/treedp/</link>
+      <link>https://blog.050623.xyz/posts/study/treedp/</link>
       <pubDate>Fri, 11 Oct 2024 18:23:38 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/treedp/</guid>
+      <guid>https://blog.050623.xyz/posts/study/treedp/</guid>
       <description>树上 DP 顾名思义，在树上进行的 DP，一般通过递归进行 一般开 $f_{i,j}$ 表示以 $i$ 为根的子树的最优解，第二维表示选不选 $i$ 洛谷 没有上司的舞会 P1352 题目 某大学有 $n$ 个职员，编号为 $1\ldots n$。 他们之间有从属关系，也就是说他们的关系就像一棵以校长为根的树，父结点就是子结点的直接上司。 现在有个周年庆宴会，宴会每邀请</description>
     </item>
     <item>
       <title>Codeforces Round 974 (Div. 3)</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf974/</link>
+      <link>https://blog.050623.xyz/posts/study/cf974/</link>
       <pubDate>Thu, 10 Oct 2024 21:07:59 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf974/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf974/</guid>
       <description>A Robin Helps 按题意模拟 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=1e5+7, mod=1e9+7; int n,ans,a[N],cnt,k; void solve(){ cnt=ans=0; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;a[i]; if(a[i]&amp;gt;=k)cnt+=a[i]; if(!a[i]&amp;amp;&amp;amp;cnt)cnt--,ans++; } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B. Robin Hood and the Major Oak 显然只有最后 $k$ 个点有效，$i^i$ 的奇偶性只和 $i$ 有关，公式加和即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define endl &amp;#39;\n&amp;#39; typedef long long ll; const int N = 1e5 + 7, mod = 1e9 + 7; ll n, k; void solve() { cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k; ll s = (n - k +</description>
     </item>
     <item>
       <title>近日刷题记录 3</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024102222/</link>
+      <link>https://blog.050623.xyz/posts/study/2024102222/</link>
       <pubDate>Mon, 07 Oct 2024 22:15:28 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024102222/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024102222/</guid>
       <description>ABC374 C - Separated Lunch 将 $n$ 个数尽量均分，因为最多只有 20 个数据，可以直接暴搜 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) #define int long long const int N=1e5+7, mod=1e9+7; int n,s,ans=INT_MAX; int a[N]; void dfs(int cnt,int sum){ if(cnt==n){ ans=min(ans,max(sum,s-sum)); return; } dfs(cnt+1,sum); dfs(cnt+1,sum+a[cnt+1]); } void solve(){ cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;a[i]; s+=a[i]; } dfs(0,0); cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } signed main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } ABC374 E - Sensor Optimization Dilemma 2 易想到二分答案，但是在 $check$ 过程中，对每个进程机器的选择需要考虑 如果直接暴力从 $0$ 到</description>
     </item>
     <item>
       <title>近日刷题记录 2</title>
-      <link>https://blog.mjc.us.kg/posts/study/202410/</link>
+      <link>https://blog.050623.xyz/posts/study/202410/</link>
       <pubDate>Sun, 06 Oct 2024 19:05:38 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/202410/</guid>
+      <guid>https://blog.050623.xyz/posts/study/202410/</guid>
       <description>AtCoder ABC372 D - Buildings 单调栈，逆向进行，找左侧比他大的数，此时栈的大小即为当前位的答案 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; #define lowbit(x) ((x)&amp;amp;(-x)) typedef long long ll; const int N=2e5+7, mod=1e9+7; int n,h[N],ans[N]; stack&amp;lt;int&amp;gt;s; void solve(){ cin&amp;gt;&amp;gt;n; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;h[i]; } for(int i=n;i&amp;gt;=1;i--){ ans[i]=s.size(); while(s.size()&amp;amp;&amp;amp;s.top()&amp;lt;h[i])s.pop(); s.push(h[i]); } for(int i=1;i&amp;lt;=n;i++)cout&amp;lt;&amp;lt;ans[i]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } ABC372 E - K-th Largest Connected Components 并查集，我们可以开 $n$ 个堆，把每个联通块都存到同一个栈当中，查询时栈的大小小于 $k$</description>
     </item>
     <item>
       <title>近日刷题记录</title>
-      <link>https://blog.mjc.us.kg/posts/study/202409/</link>
+      <link>https://blog.050623.xyz/posts/study/202409/</link>
       <pubDate>Fri, 04 Oct 2024 21:53:44 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/202409/</guid>
+      <guid>https://blog.050623.xyz/posts/study/202409/</guid>
       <description>AtCoder ABC371C Make Isomorphic 给你简单的无向图 $G$ 和 $H$ ，每个图都有 $N$ 个顶点：顶点 $1$ 、 $2$ 、 $\ldots$ 、 $N$ 。图 $G$ 有 $M_G$ 条边，其第 $i$ 条边 $(1\leq i\leq M_G)$ 连接顶点 $u_i$ 和 $v_i$ 。图 $H$ 有 $M_H$ 条边，它的第 $i$ 条边 $(1\leq i\leq M_H)$ 连接顶点 $a_i$ 和 $b_i$ 。 您可以在图 $H$ 上执行以下操作，次数不限，可能为零。 选择一对满足 $1\le i&amp;lt;j\leq N$ 的整数 $(i,j)$ 。支付 $A_{i,j}$ 点成本，如果 $H$ 中的顶点 $i$ 和 $j$ 之间</description>
     </item>
     <item>
       <title>2024CCPC网络赛</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024ccpconline/</link>
+      <link>https://blog.050623.xyz/posts/study/2024ccpconline/</link>
       <pubDate>Tue, 10 Sep 2024 14:45:39 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024ccpconline/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024ccpconline/</guid>
       <description>前言 好久没写题了，被暴打。 参赛过程也是抽象，开局就罚站 30 min 补题 L 网络预选赛 好不容易卡出来题面，看到 L 已经过了不少了，卡了半天才提交过 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 #define endl &amp;#34;\n&amp;#34; typedef long long ll; const int N=1e3+7, mod=1e9+7; void solve(){ int n, m, ans = 0; char mp[N][N]; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; for(int i = 1; i &amp;lt;= n; i++) for(int j = 1; j &amp;lt;= m; j++) cin &amp;gt;&amp;gt; mp[i][j]; for(int i = 1; i &amp;lt; n; i++){ for(int j = 1; j &amp;lt; m; j++){ if(mp[i][j] ==</description>
     </item>
     <item>
       <title>2024萌新联赛6</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B6/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B6/</link>
       <pubDate>Mon, 26 Aug 2024 17:52:28 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B6/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B6/</guid>
       <description>2024 河南萌新联赛 6 装备二选一（一） 直接比较结果即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 const int N = 1e5+7, mod = 1e9+7; void solve(){ int a, b, c, d; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d; int t1 = 100 * b * a + 100 * (100 - a); int t2 = 100 * d * c + 100 * (100 - c); cout &amp;lt;&amp;lt; (t2 &amp;gt; t1 ? &amp;#34;YES\n&amp;#34; : &amp;#34;NO\n&amp;#34;); } int main(){ ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); int t = 1; // cin &amp;gt;&amp;gt; t; while(t--) solve(); return 0; } 追寻光的方向 开一个 $suf$ 数组，用于记录 $i$ 位置后</description>
     </item>
     <item>
       <title>2024萌新联赛5</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B5/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B5/</link>
       <pubDate>Sat, 17 Aug 2024 22:45:18 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B5/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B5/</guid>
       <description>2024 河南萌新联赛 5 平方根 直接 $sqrt$ 向下取整即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--){ unsigned long long n; cin&amp;gt;&amp;gt;n; long long ans=floor(sqrt(n)); cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } } 爬楼梯 递归 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int f[1000005],mod=1e9+7; f[0]=f[1]=1; int n; cin&amp;gt;&amp;gt;n; for(int i=2;i&amp;lt;=n;i++){ for(int j=1;j&amp;lt;=3;j++){ if(i-j&amp;lt;0)break; f[i]=(f[i]+f[i-j])%mod; } } cout&amp;lt;&amp;lt;f[n]&amp;lt;&amp;lt;endl; } 区间问题 1 线段树板 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; const int N = 1e5 + 7; #define ls (now &amp;lt;&amp;lt; 1) #define rs (now &amp;lt;&amp;lt; 1 | 1) #define int long long int n, m; int a[N]; struct Node { int len, sum, tag; } tr[N &amp;lt;&amp;lt; 2]; Node operator + (const Node &amp;amp;l, const Node &amp;amp;r) { Node a; a.sum</description>
     </item>
     <item>
       <title>ABC366</title>
-      <link>https://blog.mjc.us.kg/posts/study/abc366/</link>
+      <link>https://blog.050623.xyz/posts/study/abc366/</link>
       <pubDate>Sun, 11 Aug 2024 12:29:38 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/abc366/</guid>
+      <guid>https://blog.050623.xyz/posts/study/abc366/</guid>
       <description>AtCoder Beginner Contest 366 补题 A - Election 2 判断当前是否有值大于 $n/2$ 即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 const int N = 1e5+7, mod = 1e9+7; void solve(){ int n,t,a; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;t&amp;gt;&amp;gt;a; if(n==1&amp;amp;&amp;amp;t==0&amp;amp;&amp;amp;a==0){ cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; } else if(t&amp;gt;n/2||a&amp;gt;n/2){ cout&amp;lt;&amp;lt;&amp;#34;Yes\n&amp;#34;; } else cout&amp;lt;&amp;lt;&amp;#34;No\n&amp;#34;; } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B - Vertical Writing 翻转字符串，同时对翻转后的每行从末尾开始清 * 即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 const int N = 1e5+7, mod = 1e9+7; void solve(){ int n,mx=0; cin&amp;gt;&amp;gt;n; string s[N]; for(int i=1;i&amp;lt;=n;i++){ cin&amp;gt;&amp;gt;s[i]; mx=max(mx,(int)s[i].length()); } string ans[mx+1]; for(int i=0;i&amp;lt;mx;i++){</description>
     </item>
     <item>
       <title>2024HDU4</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024hdu4/</link>
+      <link>https://blog.050623.xyz/posts/study/2024hdu4/</link>
       <pubDate>Sat, 10 Aug 2024 10:28:15 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024hdu4/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024hdu4/</guid>
       <description>2024 杭电多校 4 补题 多层血条 模拟, 只会最覆盖最上面的一层血量, 所以不用担心下层血量是什么, 只用找到最上面的那一层是什么即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; string h=&amp;#34;ABCDE&amp;#34;; void solve(){ int n,m,hp,dmg; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;hp&amp;gt;&amp;gt;dmg; int lst=(hp/m)%5,x=m; string upp; upp.resize(m+1,&amp;#39; &amp;#39;); if(hp&amp;lt;=m){ for(int i=1;i&amp;lt;=hp;i++)upp[i]=h[0],x=i; } else{ int rest=hp%m; // cout&amp;lt;&amp;lt;rest&amp;lt;&amp;lt;endl; for(int i=1;i&amp;lt;=m;i++){ if(rest)upp[i]=h[lst],x=i,rest--; else upp[i]=h[(lst-1+5)%5]; } } while(dmg){ if(upp[x]==&amp;#39;.&amp;#39;)break; upp[x]=&amp;#39;.&amp;#39;; x--; dmg--; if(x==0)x=m; } for(int i=0;i&amp;lt;=n+1;i++){ for(int j=0;j&amp;lt;=m+1;j++){ if((i==0&amp;amp;&amp;amp;j==0)||(i==0&amp;amp;&amp;amp;j==m+1)||(i==n+1&amp;amp;&amp;amp;j==0)||(i==n+1&amp;amp;&amp;amp;j==m+1))cout&amp;lt;&amp;lt;&amp;#34;+&amp;#34;; else if(i==0||i==n+1)cout&amp;lt;&amp;lt;&amp;#34;-&amp;#34;; else if(j==0||j==m+1)cout&amp;lt;&amp;lt;&amp;#34;|&amp;#34;; else cout&amp;lt;&amp;lt;upp[j]; } cout&amp;lt;&amp;lt;endl; } } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } 昵称检索 昵称分姓名和生日两部分,</description>
     </item>
     <item>
       <title>2024萌新联赛4</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B4/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B4/</link>
       <pubDate>Thu, 08 Aug 2024 22:44:47 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B4/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B4/</guid>
       <description>2024 萌新联赛 4 D 简单的素数 遍历 $1 \sim \sqrt{n}$ 即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e8+10; void solve(){ int n,flag=0; cin&amp;gt;&amp;gt;n; for(int i=2;i*i&amp;lt;=n;i++){ if(n%i==0){ flag=1; break; } } cout&amp;lt;&amp;lt;(flag?&amp;#34;No\n&amp;#34;:&amp;#34;Yes\n&amp;#34;); } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); } F 小雷的算式 按题意模拟 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; #define ls now&amp;lt;&amp;lt;1 #define rs now&amp;lt;&amp;lt;1|1 const int N = 1e5+7, mod = 1e9+7; #define int long long void solve(){ string s; cin&amp;gt;&amp;gt;s; int ans=0,tmp=0; vector&amp;lt;int&amp;gt;a; for(int i=0;i&amp;lt;s.size();i++){ if(s[i]==&amp;#39;+&amp;#39;){ a.push_back(tmp); ans+=tmp,tmp=0; } else{ tmp*=10; tmp+=(s[i]-&amp;#39;0&amp;#39;); } } a.push_back(tmp); ans+=tmp; sort(a.begin(),a.end(),greater&amp;lt;int&amp;gt;()); cout&amp;lt;&amp;lt;a[0]; for(int i=1;i&amp;lt;a.size();i++){ cout&amp;lt;&amp;lt;&amp;#34;+&amp;#34;&amp;lt;&amp;lt;a[i]; } cout&amp;lt;&amp;lt;endl&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; } signed main(){ int t=1; // cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } H 聪明且狡猾的恶魔 $1$ 号恶魔</description>
     </item>
     <item>
       <title>LCA</title>
-      <link>https://blog.mjc.us.kg/posts/study/lca/</link>
+      <link>https://blog.050623.xyz/posts/study/lca/</link>
       <pubDate>Tue, 06 Aug 2024 21:45:34 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/lca/</guid>
+      <guid>https://blog.050623.xyz/posts/study/lca/</guid>
       <description>LCA(最近公共祖先) 简介 两个节点的最近公共祖先，就是两个点的公共祖先里，离根最远的那个 $LCA({u}) = u$ $u$ 是 $v$ 的祖先，当且仅当 $LCA({u, v}) = u$ 如果 $u, v$ 互不为祖先，那么二者存在 $LCA({u, v})$ 的两颗不同子树中 前序遍历中，$LCA(S)$ 出现在所有 $S$ 中元素之前，后序遍历中 $LCA(S)$ 则出现在所有 $S$ 中元素之后 两点集并的最近公</description>
     </item>
     <item>
       <title>线段树</title>
-      <link>https://blog.mjc.us.kg/posts/study/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+      <link>https://blog.050623.xyz/posts/study/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
       <pubDate>Sun, 04 Aug 2024 18:57:54 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+      <guid>https://blog.050623.xyz/posts/study/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
       <description>线段树学习 简介 常用的用来维护 区间信息 的数据结构。 线段树可以在 $O(\log N)$ 的时间复杂度内实现单点修改、区间修改、区间查询（区间求和，求区间最大值，求区间最小值）等操作。 实现过程即为将每个长度不为 $1$ 的片段分成左右两个片段，不断递归下去，把区间分为树形结构，通过合并两端来求值 模板 单点修改 操作 $1$</description>
     </item>
     <item>
       <title>2024萌新联赛3</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B3/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B3/</link>
       <pubDate>Fri, 02 Aug 2024 11:04:20 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B3/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B3/</guid>
       <description>2024 河南萌新联赛 3 B 正则表达式 签到，四个数字都在 $[1,255]$ 之间即为合法 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; bool check(string s) { int n = s.size(); int num = 0, dots = 0; for (int i = 0; i &amp;lt; n; i++) { if (s[i] == &amp;#39;.&amp;#39;) { if (num &amp;lt; 0 || num &amp;gt; 255) return false; num = 0; } else if (isdigit(s[i])) { num = num * 10 + (s[i] - &amp;#39;0&amp;#39;); if (num &amp;gt; 255) return false; } else { return false; } } if (num &amp;lt; 0 || num &amp;gt; 255) return false; return true; } int main() { int n; cin &amp;gt;&amp;gt; n; int cnt = 0; for(int i=1;i&amp;lt;=n;i++) { string s; cin &amp;gt;&amp;gt; s; if (check(s))</description>
     </item>
     <item>
       <title>最小生成树</title>
-      <link>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link>
+      <link>https://blog.050623.xyz/posts/study/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link>
       <pubDate>Tue, 30 Jul 2024 20:11:43 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid>
+      <guid>https://blog.050623.xyz/posts/study/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid>
       <description>最小生成树算法学习</description>
     </item>
     <item>
       <title>最短路</title>
-      <link>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
+      <link>https://blog.050623.xyz/posts/study/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
       <pubDate>Mon, 29 Jul 2024 21:43:24 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E7%9F%AD%E8%B7%AF/</guid>
+      <guid>https://blog.050623.xyz/posts/study/%E6%9C%80%E7%9F%AD%E8%B7%AF/</guid>
       <description>最短路学习记录</description>
     </item>
     <item>
       <title>2024萌新联赛1</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B1/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B1/</link>
       <pubDate>Sun, 28 Jul 2024 15:36:08 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B1/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B1/</guid>
       <description>萌新联赛补题</description>
     </item>
     <item>
       <title>CF962</title>
-      <link>https://blog.mjc.us.kg/posts/study/cf962/</link>
+      <link>https://blog.050623.xyz/posts/study/cf962/</link>
       <pubDate>Sat, 27 Jul 2024 18:28:37 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/cf962/</guid>
+      <guid>https://blog.050623.xyz/posts/study/cf962/</guid>
       <description>Codeforces Round 962 还得练 A Legs 先除 $4$ 再除 $2$ #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void solve(){ int n; cin&amp;gt;&amp;gt;n; int cnt=n/4; if(n%4!=0)cnt++; cout&amp;lt;&amp;lt;cnt&amp;lt;&amp;lt;endl; } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } B Scale 按题意合理间隔输出即可 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N =1010; char mp[N][N]; void solve(){ int n,k; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; for(int i=1;i&amp;lt;=n;i++) for(int j=1;j&amp;lt;=n;j++)cin&amp;gt;&amp;gt;mp[i][j]; for(int i=1;i&amp;lt;=n;i+=k){ for(int j=1;j&amp;lt;=n;j+=k) cout&amp;lt;&amp;lt;mp[i][j]; cout&amp;lt;&amp;lt;endl; } } int main(){ int t; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } C Sort 对 $a$ 到 $z$ 这 $26$ 个字符分别开前缀和，统计 $l$ 到 $r$ 之间他们不同的数量，更改差异数量除 $2$ (向上取整)，即可 #include &amp;lt;bits/stdc++.h&amp;gt;</description>
     </item>
     <item>
       <title>博弈论</title>
-      <link>https://blog.mjc.us.kg/posts/study/%E5%8D%9A%E5%BC%88%E8%AE%BA/</link>
+      <link>https://blog.050623.xyz/posts/study/%E5%8D%9A%E5%BC%88%E8%AE%BA/</link>
       <pubDate>Fri, 26 Jul 2024 18:15:23 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/%E5%8D%9A%E5%BC%88%E8%AE%BA/</guid>
+      <guid>https://blog.050623.xyz/posts/study/%E5%8D%9A%E5%BC%88%E8%AE%BA/</guid>
       <description>简单博弈论学习记录</description>
     </item>
     <item>
       <title>2024萌新联赛2</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B2/</link>
+      <link>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B2/</link>
       <pubDate>Thu, 25 Jul 2024 20:50:08 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B2/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024%E8%90%8C%E6%96%B0%E8%81%94%E8%B5%9B2/</guid>
       <description>萌新联赛补题</description>
     </item>
     <item>
       <title>最小表示法</title>
-      <link>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95/</link>
+      <link>https://blog.050623.xyz/posts/study/%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95/</link>
       <pubDate>Wed, 24 Jul 2024 21:53:28 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95/</guid>
+      <guid>https://blog.050623.xyz/posts/study/%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95/</guid>
       <description>最小表示法学习记录</description>
     </item>
     <item>
       <title>2024HDU2</title>
-      <link>https://blog.mjc.us.kg/posts/study/2024hdu2/</link>
+      <link>https://blog.050623.xyz/posts/study/2024hdu2/</link>
       <pubDate>Tue, 23 Jul 2024 21:53:03 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/2024hdu2/</guid>
+      <guid>https://blog.050623.xyz/posts/study/2024hdu2/</guid>
       <description>杭电多校 2 补题 1010 女神的睿智 按顺序合并 8 块碎片，如果两片相同，合成后仍相同，如不同，取左侧的，最后合成大碎片时，如果两片相同，不变，如果不同，取出现次数最多的，如果不确定，输出 $N$。 签到，直接暴力 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void solve(){ string t,s; cin&amp;gt;&amp;gt;s; map&amp;lt;char,int&amp;gt;vis; for(int i=0;i&amp;lt;8;i++){ if(i%2!=1)t+=s[i]; vis[s[i]]++; } s=t; t=&amp;#34;&amp;#34;; for(int i=0;i&amp;lt;4;i++){ if(i%2!=1)t+=s[i]; } if(vis[t[0]]==vis[t[1]])cout&amp;lt;&amp;lt;&amp;#34;N&amp;#34;; else if(vis[t[0]]&amp;gt;vis[t[1]])cout&amp;lt;&amp;lt;t[0]; else cout&amp;lt;&amp;lt;t[1]; cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } int main(){ int t=1; cin&amp;gt;&amp;gt;t; while(t--)solve(); return 0; } 1007 URL 划分</description>
     </item>
     <item>
       <title>Manacher</title>
-      <link>https://blog.mjc.us.kg/posts/study/manacher/</link>
+      <link>https://blog.050623.xyz/posts/study/manacher/</link>
       <pubDate>Mon, 22 Jul 2024 22:59:43 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/manacher/</guid>
+      <guid>https://blog.050623.xyz/posts/study/manacher/</guid>
       <description>Manacher 学习记录</description>
     </item>
     <item>
       <title>0721</title>
-      <link>https://blog.mjc.us.kg/posts/study/0721/</link>
+      <link>https://blog.050623.xyz/posts/study/0721/</link>
       <pubDate>Sun, 21 Jul 2024 16:09:03 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/0721/</guid>
+      <guid>https://blog.050623.xyz/posts/study/0721/</guid>
       <description>学习记录</description>
     </item>
     <item>
       <title>KMP</title>
-      <link>https://blog.mjc.us.kg/posts/study/kmp/</link>
+      <link>https://blog.050623.xyz/posts/study/kmp/</link>
       <pubDate>Sat, 20 Jul 2024 21:33:32 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/kmp/</guid>
+      <guid>https://blog.050623.xyz/posts/study/kmp/</guid>
       <description>KMP算法学习记录</description>
     </item>
     <item>
       <title>简单的排序</title>
-      <link>https://blog.mjc.us.kg/posts/study/easy-sort/</link>
+      <link>https://blog.050623.xyz/posts/study/easy-sort/</link>
       <pubDate>Sat, 20 Jul 2024 12:16:26 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/easy-sort/</guid>
+      <guid>https://blog.050623.xyz/posts/study/easy-sort/</guid>
       <description>简单的排序实现 快速排序 快排 分治思想 复杂度 $[n\log n, n^2]$ 不稳定 &amp;ndash;$x$随机取 排序区间为 $[l, r]$ 时，长度小于 $1$，直接退出，否则选一个数字 $x$ 作为比较元素 将大于 $x$ 的放右边，小于 $x$ 的放左边，等于 $x$ 的随意放 确定 $x$ 的位置后，对两侧继续递归 void quicksort(int l, int r) { if (l &amp;gt;= r) return; // 长度小于 1，直接退出 swap(a[l], a[l + rand()</description>
     </item>
   </channel>

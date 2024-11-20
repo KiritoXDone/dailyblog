@@ -9,17 +9,17 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="KiritoXD">
-<link rel="canonical" href="https://blog.mjc.us.kg/tags/icpc/">
+<link rel="canonical" href="https://blog.050623.xyz/tags/icpc/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.mjc.us.kg/img/a.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.mjc.us.kg/img/a.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.mjc.us.kg/img/a.png">
-<link rel="apple-touch-icon" href="https://blog.mjc.us.kg/img/a.png">
-<link rel="mask-icon" href="https://blog.mjc.us.kg/img/a.png">
+<link rel="icon" href="https://blog.050623.xyz/img/a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.050623.xyz/img/a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.050623.xyz/img/a.png">
+<link rel="apple-touch-icon" href="https://blog.050623.xyz/img/a.png">
+<link rel="mask-icon" href="https://blog.050623.xyz/img/a.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://blog.mjc.us.kg/tags/icpc/index.xml">
-<link rel="alternate" hreflang="zh" href="https://blog.mjc.us.kg/tags/icpc/">
+<link rel="alternate" type="application/rss+xml" href="https://blog.050623.xyz/tags/icpc/index.xml">
+<link rel="alternate" hreflang="zh" href="https://blog.050623.xyz/tags/icpc/">
 <noscript>
     <style>
         #theme-toggle,
@@ -84,7 +84,7 @@
 <meta property="og:title" content="ICPC" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.mjc.us.kg/tags/icpc/" />
+<meta property="og:url" content="https://blog.050623.xyz/tags/icpc/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ICPC"/>
@@ -107,8 +107,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.mjc.us.kg/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
-                <img src="https://blog.mjc.us.kg/img/a.png" alt="" aria-label="logo"
+            <a href="https://blog.050623.xyz/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
+                <img src="https://blog.050623.xyz/img/a.png" alt="" aria-label="logo"
                     height="35">KiritoXD&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -135,27 +135,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.mjc.us.kg/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.050623.xyz/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
                     <span>🔍 搜索</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.mjc.us.kg/" title="🏠 主页">
+                <a href="https://blog.050623.xyz/" title="🏠 主页">
                     <span>🏠 主页</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.mjc.us.kg/posts" title="📚 文章">
+                <a href="https://blog.050623.xyz/posts" title="📚 文章">
                     <span>📚 文章</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.mjc.us.kg/tags" title="🧩 标签">
+                <a href="https://blog.050623.xyz/tags" title="🧩 标签">
                     <span>🧩 标签</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.mjc.us.kg/archives/" title="⏱️ 时间轴">
+                <a href="https://blog.050623.xyz/archives/" title="⏱️ 时间轴">
                     <span>⏱️ 时间轴</span>
                 </a>
             </li>
@@ -163,7 +163,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://blog.mjc.us.kg/">主页</a>&nbsp;»&nbsp;<a href="https://blog.mjc.us.kg/tags/">Tags</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://blog.050623.xyz/">主页</a>&nbsp;»&nbsp;<a href="https://blog.050623.xyz/tags/">Tags</a></div>
   <h1>
     ICPC
   </h1>
@@ -178,12 +178,12 @@
     <p>I. Counter 操作可以都想成连续的，那么输入 $a,b$，意为在 $a-b$ 处进行了一次归零，之后连着进行了 $b$ 次操作，如果中间有冲突，即为 NO #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; #define ls now&lt;&lt;1 #define rs now&lt;&lt;1|1 #define endl &#34;\n&#34; #define lowbit(x) ((x)&amp;(-x)) typedef long long ll; const int N=1e5&#43;7, mod=1e9&#43;7; void solve(){ int n,m,flag=0; cin&gt;&gt;n&gt;&gt;m; map&lt;int,int&gt;vis; for(int i=1;i&lt;=m;i&#43;&#43;){ int a,b; cin&gt;&gt;a&gt;&gt;b; if(b&gt;a)flag=1; int l = a - b; if(vis.find(l) != vis.end()){ vis[l] = max(vis[l], a); } else { vis[l] = a; } } int now=-1; for(auto &amp;x:vis){ if(now&gt;=x.first){ flag=1; break; } now=x.second; } cout&lt;&lt;(flag?&#34;No\n&#34;:&#34;Yes\n&#34;); } int main(){ ios::sync_with_stdio(0); cin.tie(0);cout.tie(0); int t=1; cin&gt;&gt;t; while(t--)solve(); return 0; }...</p>
   </div>
   <footer class="entry-footer"><span title='2024-10-14 21:33:28 +0800 CST'>2024-10-14</span>&nbsp;·&nbsp;4 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to ICPC 2023 南京 VP" href="https://blog.mjc.us.kg/posts/study/icpc2023nanjing/"></a>
+  <a class="entry-link" aria-label="post link to ICPC 2023 南京 VP" href="https://blog.050623.xyz/posts/study/icpc2023nanjing/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://blog.mjc.us.kg/">KiritoXD&#39;s Blog</a></span> · 
+        <span>&copy; 2024 <a href="https://blog.050623.xyz/">KiritoXD&#39;s Blog</a></span> · 
 
     <span>
         Powered by

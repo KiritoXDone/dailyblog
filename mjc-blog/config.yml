@@ -93,6 +93,8 @@ params:
     title: (〃-U-〃)
     buttons:
       - name: 👨🏻‍💻 技术
+        url: posts/tech
+      - name: 📖 学习
         url: posts/study
       - name: 🏸 生活
         url: posts/life

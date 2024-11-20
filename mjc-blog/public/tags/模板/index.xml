@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>模板 on KiritoXD&#39;s Blog</title>
-    <link>https://blog.mjc.us.kg/tags/%E6%A8%A1%E6%9D%BF/</link>
+    <link>https://blog.050623.xyz/tags/%E6%A8%A1%E6%9D%BF/</link>
     <description>Recent content in 模板 on KiritoXD&#39;s Blog</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 03 Nov 2024 11:37:33 +0800</lastBuildDate>
-    <atom:link href="https://blog.mjc.us.kg/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.050623.xyz/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Template</title>
-      <link>https://blog.mjc.us.kg/posts/study/template/</link>
+      <link>https://blog.050623.xyz/posts/study/template/</link>
       <pubDate>Sun, 03 Nov 2024 11:37:33 +0800</pubDate>
-      <guid>https://blog.mjc.us.kg/posts/study/template/</guid>
+      <guid>https://blog.050623.xyz/posts/study/template/</guid>
       <description>杂项 加速 sync_with_stdio(0);cin.tie(0);cout.tie(0) 随机数 : random_device 或 chrono::system_clock::now().time_since_epoch().count() 最短路 dijkstra $O(mlogn)$ struct Node { int y, v; Node(int _y, int _v) { y = _y, v = _v; } }; int n, m, s, t, dist[100005]; vector&amp;lt;Node&amp;gt; edge[100005]; set&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q; void dijkstra(int s, int t) { q.clear(); memset(dist, 127, sizeof(dist)); dist[s] = 0; for (int i = 1; i &amp;lt;= n; i++) q.insert({dist[i], i}); for (; !q.empty();) { int x = q.begin()-&amp;gt;second; q.erase(q.begin()); if (x == t || dist[x] &amp;gt; 1 &amp;lt;&amp;lt; 30) break; for (auto i : edge[x]) { if (dist[x] + i.v &amp;lt; dist[i.y]) { q.erase({dist[i.y], i.y}); dist[i.y] = dist[x] + i.v; q.insert({dist[i.y], i.y}); } } } cout &amp;lt;&amp;lt; dist[t] &amp;lt;&amp;lt; endl; } SPFA $O(km)$ k 为常数，最差为 $O(nm)$ struct Node{ int v,w; }; vector&amp;lt;Node&amp;gt;edge[N]; int</description>
     </item>
   </channel>

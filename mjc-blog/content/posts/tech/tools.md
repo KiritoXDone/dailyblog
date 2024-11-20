@@ -16,15 +16,31 @@ disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示当前路径
 ---
 
-基本都是搭在 [Serv00](https://jtb.mjc.us.kg/?22a060a1ba7d6594#GqvU619NPpS8k9mjqGHdKAxddBgCtEeNjcAYMVK7aW6d) 上的
+基本都是搭在 [Serv00](https://jtb.050623.xyz/?3c36a270046e5ca8#EFh9JK2b9WwHU3XPmViZSdkd9PQVLvFXPzPetm6c9nnn) 上的
 ### Alist  
 
 [链接](https://kiritoxd.us.kg/)  
 
 ### PrivateBin  
 
-[链接](https://jtb.mjc.us.kg/)  
+[链接](https://jtb.050623.xyz/)  
 
 ### WebSSH  
 
-[链接](https://ssh.mjc.us.kg/)  
+已废弃  暂用 Linux-do 佬友的服务 [链接](https://webssh.linux-do.rr.nu/) 
+
+### Cron-Serv00  
+
+[链接](https://cron.050623.xyz/) 
+
+### Uptime-KUMA
+
+[链接](https://status.050623.xyz/) 
+
+### Proxy
+
+hy2:
+```yaml
+hysteria2://2bfbab50-9fd3-11ef-a739-3cecef0f513e@31.186.87.211:20000/?sni=www.bing.com&alpn=h3&insecure=1#PL-Atman_Sp._z_o.o. 
+```
+
