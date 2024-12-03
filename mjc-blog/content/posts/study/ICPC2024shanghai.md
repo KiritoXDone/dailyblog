@@ -5,6 +5,8 @@ lastmod: 2024-11-20T20:30:48+08:00 #更新时间
 author: ["KiritoXD"] #作者
 tags: 
 - "补题"
+summary: "打铁真的难受啊" #描述
+categories: ['Study'] #分类
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""

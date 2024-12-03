@@ -43,14 +43,14 @@ menu:
       name: 📚 文章
       url: posts
       weight: 3
-    - identifier: tags
-      name: 🧩 标签
-      url: tags
-      weight: 15
     - identifier: archives
-      name: ⏱️ 时间轴
+      name: ⏱️ 归档
       url: archives/
       weight: 20
+    - identifier: about
+      name: 🙋🏻‍♂️ 关于
+      url: /about
+      weight: 30      
 
 outputs:
   home:
@@ -142,7 +142,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: [ "title", "permalink", "summary" ]
+    keys: [ "title", "permalink", "summary", "content" ]
 
   StartYear: 2024 # 底部开始年份
 

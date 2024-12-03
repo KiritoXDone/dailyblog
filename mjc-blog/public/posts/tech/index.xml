@@ -2,18 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>👨🏻‍💻 技术 on KiritoXD&#39;s Blog</title>
-    <link>https://blog.050623.xyz/posts/tech/</link>
+    <link>http://localhost:1313/posts/tech/</link>
     <description>Recent content in 👨🏻‍💻 技术 on KiritoXD&#39;s Blog</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 31 Oct 2024 20:58:59 +0800</lastBuildDate>
-    <atom:link href="https://blog.050623.xyz/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Dec 2024 21:45:20 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自建小玩具</title>
-      <link>https://blog.050623.xyz/posts/tech/tools/</link>
+      <link>http://localhost:1313/posts/tech/tools/</link>
       <pubDate>Thu, 31 Oct 2024 20:58:59 +0800</pubDate>
-      <guid>https://blog.050623.xyz/posts/tech/tools/</guid>
-      <description>基本都是搭在 Serv00 上的 Alist 链接 PrivateBin 链接 WebSSH 已废弃 暂用 Linux-do 佬友的服务 链接 Cron-Serv00 链接 Uptime-KUMA 链接 Proxy hy2: hysteria2://2bfbab50-9fd3-11ef-a739-3cecef0f513e@31.186.87.211:20000/?sni=www.bing.com&amp;amp;alpn=h3&amp;amp;insecure=1#PL-Atman_Sp._z_o.o.</description>
+      <guid>http://localhost:1313/posts/tech/tools/</guid>
+      <description>自建使我快乐</description>
+    </item>
+    <item>
+      <title>Papermod</title>
+      <link>http://localhost:1313/posts/tech/papermod/</link>
+      <pubDate>Mon, 02 Dec 2024 21:45:20 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/papermod/</guid>
+      <description>记录优化主题的过程</description>
+    </item>
+    <item>
+      <title>在 Hugging Face 上部署 AList (Aria2 和 Qbitorrent 可用)</title>
+      <link>http://localhost:1313/posts/tech/hf-alist/</link>
+      <pubDate>Sun, 01 Dec 2024 14:57:08 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/hf-alist/</guid>
+      <description>我 TM 薅薅薅</description>
     </item>
   </channel>
 </rss>

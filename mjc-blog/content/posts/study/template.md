@@ -5,6 +5,8 @@ lastmod: 2024-11-03T11:37:33+08:00 #更新时间
 author: ["KiritoXD"] #作者
 tags: 
 - "模板"
+summary: "常用模板，不时更新" #描述
+categories: ['Study'] #分类
 description: "" #描述
 weight: 1 # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""

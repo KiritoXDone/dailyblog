@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,17 +9,17 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="KiritoXD">
-<link rel="canonical" href="https://blog.050623.xyz/tags/daily/">
+<link rel="canonical" href="http://localhost:1313/tags/daily/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.050623.xyz/img/a.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.050623.xyz/img/a.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.050623.xyz/img/a.png">
-<link rel="apple-touch-icon" href="https://blog.050623.xyz/img/a.png">
-<link rel="mask-icon" href="https://blog.050623.xyz/img/a.png">
+<link rel="icon" href="http://localhost:1313/img/a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/img/a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/img/a.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/img/a.png">
+<link rel="mask-icon" href="http://localhost:1313/img/a.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://blog.050623.xyz/tags/daily/index.xml">
-<link rel="alternate" hreflang="zh" href="https://blog.050623.xyz/tags/daily/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/daily/index.xml">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/tags/daily/">
 <noscript>
     <style>
         #theme-toggle,
@@ -84,7 +84,7 @@
 <meta property="og:title" content="Daily" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.050623.xyz/tags/daily/" />
+<meta property="og:url" content="http://localhost:1313/tags/daily/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Daily"/>
@@ -107,8 +107,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.050623.xyz/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
-                <img src="https://blog.050623.xyz/img/a.png" alt="" aria-label="logo"
+            <a href="http://localhost:1313/" accesskey="h" title="KiritoXD&#39;s Blog (Alt + H)">
+                <img src="http://localhost:1313/img/a.png" alt="" aria-label="logo"
                     height="35">KiritoXD&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -135,35 +135,35 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.050623.xyz/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
                     <span>🔍 搜索</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.050623.xyz/" title="🏠 主页">
+                <a href="http://localhost:1313/" title="🏠 主页">
                     <span>🏠 主页</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.050623.xyz/posts" title="📚 文章">
+                <a href="http://localhost:1313/posts" title="📚 文章">
                     <span>📚 文章</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.050623.xyz/tags" title="🧩 标签">
-                    <span>🧩 标签</span>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.050623.xyz/archives/" title="⏱️ 时间轴">
-                    <span>⏱️ 时间轴</span>
+                <a href="http://localhost:1313/about" title="🙋🏻‍♂️ 关于">
+                    <span>🙋🏻‍♂️ 关于</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://blog.050623.xyz/">主页</a>&nbsp;»&nbsp;<a href="https://blog.050623.xyz/tags/">Tags</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">Tags</a></div>
   <h1>
     Daily
   </h1>
@@ -175,15 +175,17 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>0721 学习记录 今天集训休息，自己看了看代码源的视频补知识点 kmp 相关 子串查询 输入两个字符串 $s$, $p$，查询 $p$ 是否在 $s$ 中出现，若出现输出出现位置，否则输出 $-1$ 简化版 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; string s,p; int nxt[100001],f[100001],n,m; void kmp(){ n=s.size(); m=p.size(); int j=0; nxt[0]=0; p=p&#43;&#34;#&#34;&#43;s; for(int i=1;i&lt;m&#43;n&#43;1;i&#43;&#43;){ while(j&amp;&amp;p[i]!=p[j]) j=nxt[j-1]; if(p[i]==p[j]) j&#43;&#43;; nxt[i]=j; } for(int i=m&#43;1;i&lt;n&#43;m&#43;1;i&#43;&#43;){ if(nxt[i]==m)cout&lt;&lt;i-2*m&#43;1&lt;&lt;endl; } } int main(){ cin&gt;&gt;s&gt;&gt;p; kmp(); return 0; } 常规版 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; string s,p; int nxt[100001],f[100001],n,m; void kmp(){ n=s.size(); m=p.size(); int j=0; nxt[0]=0; for(int i=1;i&lt;m;i&#43;&#43;){ while(j&amp;&amp;p[i]!=p[j]) j=nxt[j-1]; if(p[i]==p[j]) j&#43;&#43;; nxt[i]=j; } j=0;...</p>
+    <p>日常学习记录</p>
   </div>
-  <footer class="entry-footer"><span title='2024-07-21 16:09:03 +0800 CST'>2024-07-21</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;KiritoXD</footer>
-  <a class="entry-link" aria-label="post link to 0721" href="https://blog.050623.xyz/posts/study/0721/"></a>
+  <footer class="entry-footer">
+
+<span title='2024-07-21 16:09:03 +0800 CST'>2024-07-21</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;390 字&nbsp;·&nbsp;KiritoXD</footer>
+  <a class="entry-link" aria-label="post link to 0721" href="http://localhost:1313/posts/study/0721/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://blog.050623.xyz/">KiritoXD&#39;s Blog</a></span> · 
+        <span>&copy; 2024 <a href="http://localhost:1313/">KiritoXD&#39;s Blog</a></span> · 
 
     <span>
         Powered by

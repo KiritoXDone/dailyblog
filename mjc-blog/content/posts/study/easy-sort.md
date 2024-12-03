@@ -1,7 +1,8 @@
 +++
 title = "简单的排序"
 date = "2024-07-20T12:16:26+08:00"
-
+summary = "Educational Codeforces Round 164 (Rated for Div. 2) 补题" 
+categories =  ['Study']
 tags = ["sort",]
 +++
 
