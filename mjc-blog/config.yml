@@ -50,7 +50,7 @@ menu:
     - identifier: about
       name: 🙋🏻‍♂️ 关于
       url: /about
-      weight: 30      
+      weight: 4      
 
 outputs:
   home:
